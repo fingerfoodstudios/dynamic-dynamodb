@@ -148,10 +148,10 @@
               "cp /home/ec2-user/.aws/config ~/.aws/config",
               {
                 "Fn::Join": [ "", [
-                  "echo \"aws s3 cp /etc/dynamic-dynamodb/dynamic-dynamodb.conf ", { "Ref": "S3Bucket" }, "dynamic-dynamodb.conf --region ", { "Ref" : "S3BucketRegion" },
-                  " || (echo 'Failed to upload /etc/dynamic-dynamodb/dynamic-dynamodb.conf to ",
-                  { "Ref": "S3Bucket" }, "' ; exit 1)\">/etc/dynamic-dynamodb/scripts/upload-config-to-s3.sh",
-                  " || error_exit 'Failed to create /etc/dynamic-dynamodb/scripts/upload-config-to-s3.sh'"
+                  "echo \"aws s3 cp ", { "Ref": "S3Bucket" }, "/etc/dynamic-dynamodb/dynamic-dynamodb.conf dynamic-dynamodb.conf --region ", { "Ref" : "S3BucketRegion" },
+                  " || (echo 'Failed to download /etc/dynamic-dynamodb/dynamic-dynamodb.conf from ",
+                  { "Ref": "S3Bucket" }, "' ; exit 1)\">/etc/dynamic-dynamodb/scripts/download-config-to-s3.sh",
+                  " || error_exit 'Failed to create /etc/dynamic-dynamodb/scripts/download-config-to-s3.sh'"
                 ]]
               },
               {
