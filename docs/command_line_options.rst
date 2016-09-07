@@ -72,7 +72,7 @@ Below is a listing of Dynamic DynamoDB's command line parameters.
                             with the --daemon flag. (default: default)
       --pid-file-dir PID_FILE_DIR
                             Directory where pid file is located in. Defaults to
-                            /tmp
+                            /var/run
 
     DynamoDB options:
       -r REGION, --region REGION

@@ -16,7 +16,7 @@ DEFAULT_OPTIONS = {
         'daemon': False,
         'instance': 'default',
         'dry_run': False,
-        'pid_file_dir': '/tmp',
+        'pid_file_dir': '/var/run',
         'run_once': False,
 
         # [global]

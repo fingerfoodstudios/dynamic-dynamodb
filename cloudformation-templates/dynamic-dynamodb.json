@@ -140,7 +140,7 @@
               "yum install git -y",
               "easy_install pip || error_exit 'Failed to install pip'",
               "log \"Installed pip\"",
-              "echo \"dynamic-dynamodb>=2.0.0,<3.0.0\">/etc/dynamic-dynamodb/requirements.txt",
+              "echo \"-e git://github.com/fingerfoodstudios/dynamic-dynamodb.git#egg=dynamic-dynamodb\">/etc/dynamic-dynamodb/requirements.txt",
               "/usr/local/bin/pip install -U -r /etc/dynamic-dynamodb/requirements.txt || error_exit 'Failed to install dynamic-dynamodb package from pip repository'",
               "log \"Installed dynamic-dynamodb\"",
               "",

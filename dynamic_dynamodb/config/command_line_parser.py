@@ -65,8 +65,8 @@ def parse():
             'with the --daemon flag. (default: default)'))
     daemon_ag.add_argument(
         '--pid-file-dir',
-        default='/tmp',
-        help='Directory where pid file is located in. Defaults to /tmp')
+        default='/var/run',
+        help='Directory where pid file is located in. Defaults to /var/run')
     dynamodb_ag = parser.add_argument_group('DynamoDB options')
     dynamodb_ag.add_argument(
         '-r', '--region',
