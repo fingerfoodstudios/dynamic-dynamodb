@@ -137,6 +137,7 @@
               "if [[ -f $INSTALLER_LOG_FILE_LOCATION ]]; then",
               "  backup_file_locally $INSTALLER_LOG_FILE_LOCATION",
               "fi",
+              "yum install git -y",
               "easy_install pip || error_exit 'Failed to install pip'",
               "log \"Installed pip\"",
               "echo \"dynamic-dynamodb>=2.0.0,<3.0.0\">/etc/dynamic-dynamodb/requirements.txt",
