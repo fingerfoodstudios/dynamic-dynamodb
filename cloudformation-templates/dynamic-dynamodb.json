@@ -170,7 +170,8 @@
                   "# All is well so signal success\n",
                   "/opt/aws/bin/cfn-signal -e 0 -r \"Dynamic DynamoDB instance setup complete\" '", { "Ref": "WaitHandle" }, "'\n"
                 ]]
-              }
+              },
+              "chkconfig dynamic-dynamodb on"
             ]]
           }
         }
